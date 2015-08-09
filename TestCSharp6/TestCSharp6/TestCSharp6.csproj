@@ -35,6 +35,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="res.Designer.cs">
+      <DependentUpon>res.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="data.txt" />
+    <EmbeddedResource Include="res.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>res.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
